@@ -1,0 +1,9 @@
+<h2>Listado Noticias</h2>
+
+<p *ngIf="error" class="error">No se pudo cargar la informacion</p>
+
+<ul>
+    <li *ngFor="let item of noticias">
+        {{item.title}}
+    </li>
+</ul>

@@ -1,7 +1,7 @@
 <h1 *ngIf="nombre">Hola {{nombre}}</h1>
 
 <!-- <input (keyup)="setBuscar($event)" type="text" placeholder="Titulo..."> -->
-<form (submit)="filtrar($event)">
+<!-- <form (submit)="filtrar($event)">
   <input name="buscar" (keypress)="detenerSubmit($event)" [(ngModel)]="buscar" type="text" placeholder="Titulo...">
   <button>Buscar</button>
 </form>
@@ -9,4 +9,6 @@
 
 <ul class="nombre_clase">
   <li *ngFor="let pelicula of filteredMovies">{{pelicula.title}}</li>
-</ul>
+</ul> -->
+
+<app-listado-noticias></app-listado-noticias>
