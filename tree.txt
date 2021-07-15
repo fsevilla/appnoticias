@@ -1,0 +1,24 @@
+app/
+    app.module.ts
+    app.component.ts
+    
+    pages/
+        noticias
+            listado-noticias
+            datos-noticia 
+            crear-noticia 
+
+    layout/
+        header 
+        footer 
+        sidebar 
+
+    commons/
+        components/
+        services/
+            noticia.service
+        directives/
+        pipes/
+        interfaces/
+
+
