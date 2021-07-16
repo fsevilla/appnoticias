@@ -1,0 +1,15 @@
+<h2>Noticias Recientes</h2>
+
+<select [(ngModel)]="pais" (change)="getTitulares()">
+    <option value="mx">Mexico</option>
+    <option value="us">Estados Unidos</option>
+</select>
+
+<p *ngIf="cargando">Cargando datos....</p>
+
+<ul>
+    <!-- titulares.forEach(item => {}) -->
+    <li *ngFor="let item of titulares"> 
+        {{item.title}}
+    </li>
+</ul>

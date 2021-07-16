@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Noticia } from '../interfaces/noticia';
+// import { Noticia } from '../interfaces/noticia';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -29,13 +30,13 @@ export class NoticiaService {
     });
   }
 
-  getNoticias(): Promise<any> {
-    const url = 'https://newsapi.org/v2/everything?q=bitcoin&from=2021-07-15&apiKey=59a12e101caf4769b2cf2cb82b677ef3';
+  getElementos(buscar: string): Promise<any> {
+    const url = `${environment.apiUrl}everything?q=${buscar}&from=2021-07-15&apiKey=${environment.apiKey}`;
     return this.httpClient.get(url).toPromise();
   }
 
-  getNoticiasObservable(): Observable<any> {
-    const url = 'https://newsapi.org/v2/everything?q=bitcoin&from=2021-07-15&apiKey=59a12e101caf4769b2cf2cb82b677ef3';
+  getNoticiasObservable(buscar: string): Observable<any> {
+    const url = `${environment.apiUrl}everything?q=${buscar}&from=2021-07-15&apiKey=${environment.apiKey}`;
     return this.httpClient.get(url);
   }
 }

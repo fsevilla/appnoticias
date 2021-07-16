@@ -2,6 +2,14 @@
 
 <p *ngIf="error" class="error">No se pudo cargar la informacion</p>
 
+<p *ngIf="cargando">Cargando...</p>
+
+<!-- <div *ngIf="" class="loader"></div> -->
+
+<input type="text" placeholder="Buscar..." [(ngModel)]="buscar">
+<button (click)="getNoticias()">Buscar</button>
+
+
 <ul>
     <li *ngFor="let item of noticias">
         {{item.title}}

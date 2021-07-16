@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { MoviesComponent } from './movies/movies.component';
 import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { ListadoNoticiasComponent } from './pages/noticias/listado-noticias/listado-noticias.component';
+import { ListadoTitularesComponent } from './pages/titulares/listado-titulares/listado-titulares.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MoviesComponent,
     NoticiasComponent,
-    ListadoNoticiasComponent
+    ListadoNoticiasComponent,
+    ListadoTitularesComponent
   ],
   imports: [
     BrowserModule,
