@@ -13,26 +13,31 @@ export class ListadoNoticiasComponent implements OnInit {
   // noticias: Noticia[] = [];
   noticias: Array<Noticia> = [];
   error: boolean = false;
+  buscar: string = '';
+  cargando: boolean = false;
 
   constructor(private noticiaService: NoticiaService) {
     console.log('Servicio Noticia: ', noticiaService);
   }
 
   ngOnInit() {
-    this.noticiaService.getNoticias().then(response => {
-      this.noticias = response.articles;
-      this.error = false;
-    }).catch(e => {
-      // No se pudo cargar la informacion
-      this.error = true;
-      console.log('aqui es donde falla');
-    });
   }
 
   getNoticias() {
-    this.noticiaService.getNoticiasObservable().subscribe(response =>{ 
+    // this.noticiaService.getNoticiasObservable(this.buscar).subscribe(response =>{ 
+    //   this.noticias = response.articles;
+    // })
+
+    this.cargando = true;
+    this.noticiaService.getElementos(this.buscar).then(response => {
       this.noticias = response.articles;
-    })
+      this.error = false;
+      this.cargando = false;
+    }).catch(e => {
+      // No se pudo cargar la informacion
+      this.error = true;
+      this.cargando = false;
+    });
   }
 
 }

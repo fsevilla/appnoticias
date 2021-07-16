@@ -6,7 +6,9 @@ app/
         noticias
             listado-noticias
             datos-noticia 
-            crear-noticia 
+            crear-noticia
+        titulares/
+            listado-titulares
 
     layout/
         header 
@@ -17,8 +19,30 @@ app/
         components/
         services/
             noticia.service
+            titular.service
         directives/
         pipes/
         interfaces/
+
+
+
+Servicios
+    GET multiples registros
+    GET traer un objeto
+    POST enviar datos (multiples o single)
+    PUT actualizar datos 
+    DELETE eliminar datos
+
+
+
+Servicio CRUD 
+    getAll 
+    getItem 
+    create 
+    update 
+    delete 
+
+servicio noticia extends CRUD 
+servicio titular extends CRUD 
 
 
