@@ -8,6 +8,8 @@ import { environment } from 'src/environments/environment';
 })
 export class TitularService {
 
+  protected endpoint: string = 'top-headlines';
+
   constructor(private httpClient: HttpClient) { }
 
   getElementos(pais: string): Promise<any> {

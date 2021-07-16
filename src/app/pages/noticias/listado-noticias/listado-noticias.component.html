@@ -6,7 +6,7 @@
 
 <!-- <div *ngIf="" class="loader"></div> -->
 
-<input type="text" placeholder="Buscar..." [(ngModel)]="buscar">
+<input (keypress)="iniciarBusqueda($event)" type="text" placeholder="Buscar..." [(ngModel)]="buscar">
 <button (click)="getNoticias()">Buscar</button>
 
 

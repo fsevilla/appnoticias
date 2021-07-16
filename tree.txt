@@ -43,6 +43,19 @@ Servicio CRUD
     delete 
 
 servicio noticia extends CRUD 
-servicio titular extends CRUD 
+servicio titular extends CRUD
 
 
+
+
+GET /noticias 
+GET /noticias/123123321 
+POST /noticias 
+PUT /noticias/123123123 
+DELETE /noticias/123123321
+
+GET /titulares 
+GET /titulares/123123321 
+POST /titulares 
+PUT /titulares/123123123 
+DELETE /titulares/123123321
