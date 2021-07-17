@@ -1,1 +1,13 @@
-<p>detalle-titular works!</p>
+<div *ngIf="noticia.title">
+    <h2>{{noticia.title}}</h2>
+    <h3>Autor: {{noticia.author}}</h3>
+    <img src="{{noticia.urlToImage}}" alt="">
+    <div>
+        {{noticia.content}}
+    </div>
+</div>
+
+<div *ngIf="!noticia.title">
+    <h3>No se encontró la noticia</h3>
+    <a routerLink="..">Ir a titulares</a>
+</div>

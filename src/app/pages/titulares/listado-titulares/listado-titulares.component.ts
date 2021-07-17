@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Noticia } from 'src/app/commons/interfaces/noticia';
+import { StorageService } from 'src/app/commons/services/storage.service';
 import { TitularService } from 'src/app/commons/services/titular.service';
 
 @Component({
@@ -15,7 +16,7 @@ export class ListadoTitularesComponent implements OnInit {
   pais: string = 'mx';
   cargando: boolean = false;
 
-  constructor(private titularService: TitularService) { }
+  constructor(private titularService: TitularService, private storageService: StorageService) { }
 
   ngOnInit(): void {
     this.getTitulares();
@@ -34,6 +35,10 @@ export class ListadoTitularesComponent implements OnInit {
       this.error = true;
       this.cargando = false;
     });
+  }
+
+  guardarNoticia(titular: Noticia) {
+    this.storageService.guardar('noticia-seleccionada', titular);
   }
 
 }
