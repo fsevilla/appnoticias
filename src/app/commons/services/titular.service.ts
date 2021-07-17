@@ -1,19 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 
-import { environment } from 'src/environments/environment';
+import { CrudService } from './crud.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class TitularService {
+export class TitularService extends CrudService {
 
   protected endpoint: string = 'top-headlines';
 
-  constructor(private httpClient: HttpClient) { }
-
-  getElementos(pais: string): Promise<any> {
-    const url = `${environment.apiUrl}top-headlines?country=${pais}&apiKey=${environment.apiKey}`;
-    return this.httpClient.get(url).toPromise();
-  }
 }

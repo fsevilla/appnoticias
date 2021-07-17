@@ -9,6 +9,10 @@ import { MoviesComponent } from './movies/movies.component';
 import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { ListadoNoticiasComponent } from './pages/noticias/listado-noticias/listado-noticias.component';
 import { ListadoTitularesComponent } from './pages/titulares/listado-titulares/listado-titulares.component';
+import { NoEncontradaComponent } from './pages/no-encontrada/no-encontrada.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import { DetalleTitularComponent } from './pages/titulares/detalle-titular/detalle-titular.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { ListadoTitularesComponent } from './pages/titulares/listado-titulares/l
     MoviesComponent,
     NoticiasComponent,
     ListadoNoticiasComponent,
-    ListadoTitularesComponent
+    ListadoTitularesComponent,
+    NoEncontradaComponent,
+    HeaderComponent,
+    FooterComponent,
+    DetalleTitularComponent
   ],
   imports: [
     BrowserModule,

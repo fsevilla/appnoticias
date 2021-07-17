@@ -24,7 +24,7 @@ export class ListadoTitularesComponent implements OnInit {
   getTitulares() {
     this.cargando = true;
     // this.titulares = [];
-    this.titularService.getElementos(this.pais)
+    this.titularService.getElementos(`country=${this.pais}`)
     .then(response => {
       this.error = false;
       this.titulares = response.articles;

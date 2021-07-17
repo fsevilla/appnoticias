@@ -16,8 +16,18 @@ export class CrudService {
     this.apiKey = environment.apiKey;
   }
 
-  getElementos(buscar: string): Promise<any> {
-    const url = `${environment.apiUrl}${this.endpoint}?q=${buscar}&from=2021-07-15&apiKey=${environment.apiKey}`;
+  getElementos(query: string): Promise<any> {
+    // q=${buscar}&from=2021-07-15
+    // country=${pais}
+    const url = `${environment.apiUrl}${this.endpoint}?apiKey=${environment.apiKey}&${query}`;
     return this.httpClient.get(url).toPromise();
   }
+
+  getElementoPorId() {}
+
+  crearElement() {}
+
+  editarElemento() {}
+
+  eliminarElemento() {}
 }
