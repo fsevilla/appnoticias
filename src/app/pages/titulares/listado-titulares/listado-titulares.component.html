@@ -10,6 +10,6 @@
 <ul>
     <!-- titulares.forEach(item => {}) -->
     <li *ngFor="let item of titulares"> 
-        {{item.title}}
+        <a [routerLink]="item.title">{{item.title}}</a>
     </li>
 </ul>

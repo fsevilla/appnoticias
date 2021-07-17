@@ -1,0 +1,10 @@
+.menu {
+    list-style: none;
+    background-color: lightgrey;
+
+    > li {
+        display: inline-block;
+        margin-right: 12px;
+    }
+}
+

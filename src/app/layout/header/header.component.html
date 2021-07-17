@@ -1,0 +1,10 @@
+<header>
+    Noticias App
+    <ul class="menu">
+        <li *ngFor="let opcion of opciones">
+            <!-- <a routerLink="{{opcion.path}}">{{opcion.label}}</a> -->
+            <a [routerLink]="opcion.path">{{opcion.label}}</a>
+            <!-- <a (click)="mandarARuta(opcion.path)">{{opcion.label}}</a> -->
+        </li>
+    </ul>
+</header>

@@ -1,4 +1,4 @@
-<h1 *ngIf="nombre">Hola {{nombre}}</h1>
+
 
 <!-- <input (keyup)="setBuscar($event)" type="text" placeholder="Titulo..."> -->
 <!-- <form (submit)="filtrar($event)">
@@ -11,5 +11,11 @@
   <li *ngFor="let pelicula of filteredMovies">{{pelicula.title}}</li>
 </ul> -->
 
-<app-listado-noticias></app-listado-noticias>
-<!-- <app-listado-titulares></app-listado-titulares> -->
+<app-header></app-header>
+
+<div class="content">
+  <h1 *ngIf="nombre">Hola {{nombre}}</h1>
+  <router-outlet></router-outlet>
+</div>
+
+<app-footer></app-footer>

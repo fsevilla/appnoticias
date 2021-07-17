@@ -23,13 +23,22 @@ export class ListadoNoticiasComponent implements OnInit {
   ngOnInit() {
   }
 
+  iniciarBusqueda(e: any) {
+    if (e.key === 'Enter') {
+      this.getNoticias();
+    }
+  }
+
   getNoticias() {
     // this.noticiaService.getNoticiasObservable(this.buscar).subscribe(response =>{ 
     //   this.noticias = response.articles;
     // })
+    if (this.buscar === '') {
+      return;
+    }
 
     this.cargando = true;
-    this.noticiaService.getElementos(this.buscar).then(response => {
+    this.noticiaService.getElementos(`q=${this.buscar}&from=2021-07-15`).then(response => {
       this.noticias = response.articles;
       this.error = false;
       this.cargando = false;
