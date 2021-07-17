@@ -1,0 +1,34 @@
+<form [formGroup]="form" (submit)="enviarDatos()">
+    <div>
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" formControlName="nombre">
+    </div>
+    <div>
+        <label for="correo">Correo: </label>
+        <input type="email" name="correo" formControlName="correo">
+        <span *ngIf="form.controls.correo.errors && form.controls.correo.errors.required" class="error">El campo es requerido</span>
+        <span *ngIf="form.controls.correo.errors && form.controls.correo.errors.email" class="error">El correo no es valido</span>
+    </div>
+    <div>
+        <label for="edad">Edad: </label>
+        <input type="number" name="edad" formControlName="edad">
+    </div>
+    <div>
+        <label for="genero">Genero: </label>
+        <select name="genero" formControlName="genero">
+            <option value="M">Masculino</option>
+            <option value="F">Femenino</option>
+        </select>
+    </div>
+    <div>
+        <label for="password">Password: </label>
+        <input type="password" name="password" formControlName="password">
+    </div>
+    <div>
+        <input type="checkbox" name="terminos" formControlName="terminos"> Acepto los terminos y condiciones
+    </div>
+
+    -- {{form.valid}} --
+
+    <button>Guardar</button>
+</form>

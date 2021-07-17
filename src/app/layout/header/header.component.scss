@@ -1,10 +1,14 @@
 .menu {
     list-style: none;
-    background-color: lightgrey;
 
     > li {
         display: inline-block;
         margin-right: 12px;
+        font-size: 16px;
+
+        a {
+            color: white;
+        }
     }
 }
 
